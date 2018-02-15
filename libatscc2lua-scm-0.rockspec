@@ -1,7 +1,7 @@
 package = "libatscc2lua"
-version = "0.0-0"
+version = "scm-0"
 source = {
-    url = 
+    url = "git://github.com/bakpakin/libatscc2lua"
 }
 description = {
    summary = "Runtime library for ATS when compiled to Lua.",
@@ -9,7 +9,7 @@ description = {
    Runtime library for ATS when compiled to Lua. Pure Lua, does
    not contain native code or binaries.
    ]],
-   homepage = "https://github.com/bakpakin/ats-lua",
+   homepage = "https://github.com/bakpakin/libatscc2lua",
    license = "MIT"
 }
 dependencies = {
