@@ -11,7 +11,7 @@ will try to find this library and load the needed code.
 
 See the Luarocks package [here](https://luarocks.org/modules/bakpakin/libatscc2lua)
 
-sh```
+```sh
 luarocks install --server=http://luarocks.org/dev libatscc2lua
 ```
 
