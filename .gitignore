@@ -1,8 +1,11 @@
 # Ignore generated tarballs
 *.tar.gz
 
-# Ignore the generated lua file
-libatscc2lua.lua
+# DON'T Ignore the generated lua file. This
+# allows Luarocks to easily find the source without
+# having to manually upload lots of tarballs when things change.
+# Instead, we can put tags on the repo
+# libatscc2lua.lua
 
 # Ignore rocks.
 *.rock
