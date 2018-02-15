@@ -21,7 +21,6 @@ build = {
        libatscc2lua = "libatscc2lua.lua"
    },
    copy_directories = {
-       "SATS",
-       "HATS"
+       "SATS"
    }
 }

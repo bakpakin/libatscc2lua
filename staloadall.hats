@@ -9,17 +9,17 @@
 //
 (* ****** ****** *)
 //
-#staload "../SATS/basics.sats"
+#staload "./SATS/basics.sats"
 //
 (* ****** ****** *)
 //
-#staload "../SATS/integer.sats"
+#staload "./SATS/integer.sats"
 //
 (* ****** ****** *)
 //
-#staload "../SATS/bool.sats"
-#staload "../SATS/float.sats"
-#staload "../SATS/print.sats"
+#staload "./SATS/bool.sats"
+#staload "./SATS/float.sats"
+#staload "./SATS/print.sats"
 //
 (* ****** ****** *)
 
