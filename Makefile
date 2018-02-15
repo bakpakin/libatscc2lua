@@ -13,7 +13,8 @@ all: concat
 # Concatenated build
 concat: libatscc2lua.lua
 libatscc2lua.lua: $(CATS)
-	$(CAT) $^ > $@
+	echo "-- Auto generated - Do not edit\n" > $@
+	$(CAT) $^ >> $@
 
 clean:
 	$(RMF) libatscc2lua.lua

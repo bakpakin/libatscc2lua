@@ -1,3 +1,5 @@
+-- Auto generated - Do not edit
+
 --[[
 --
 -- HX-2014-08:
