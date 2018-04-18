@@ -170,6 +170,16 @@ end
 --
 --]]
 
+
+--[[ end of [basics_cats.lua] ]]--
+--[[
+--
+-- HX-2014-08:
+-- for Lua code
+-- translated from ATS
+--
+--]]
+
 local tostring = tostring
 local w = io.write
 local function writer(x) w(tostring(x)) end
