@@ -15,6 +15,9 @@ See the Luarocks package [here](https://luarocks.org/modules/bakpakin/libatscc2l
 luarocks install --server=http://luarocks.org/dev libatscc2lua
 ```
 
+Much of this library was based on the runtime library for the the ATS JavaScript
+target, [libatscc2js](https://github.com/githwxi/ATS-Postiats/tree/master/contrib/libatscc2js).
+
 # Building
 
 The libatscc2lua.lua file can be built using make. It is a concatentaion of all of

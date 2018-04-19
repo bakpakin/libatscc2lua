@@ -33,6 +33,7 @@ abstype LuaThread
 abstype LuaFunction
 abstype LuaBoolean
 abstype LuaUserdata
+abstype LuaFile
 //
 (* ****** ****** *)
 //
