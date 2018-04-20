@@ -19,22 +19,7 @@ LIBATSCC_targetloc
 //
 #staload "./basics.sats"
 //
-#include "{$LIBATSCC}/SATS/list.sats"
-//
-(* ****** ****** *)
-//
-fun{a:t0p}
-fprint_list
-  (LuaFile, List(INV(a))): void = "mac#%"
-//
-fun{}
-fprint_list$sep(out: LuaFile): void = "mac#%"
-//
-fun{a:t0p}
-fprint_list_sep
-  (LuaFile, List(INV(a)), sep: string): void = "mac#%"
-//
-overload fprint with fprint_list of 100
+#include "{$LIBATSCC}/SATS/list_vt.sats"
 //
 (* ****** ****** *)
 

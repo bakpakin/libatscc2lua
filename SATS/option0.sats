@@ -9,7 +9,7 @@
 // prefix for external names
 //
 #define
-ATS_EXTERN_PREFIX "ats2luapre_"
+ATS_EXTERN_PREFIX "ats2luapre_ML_"
 //
 (* ****** ****** *)
 //
@@ -19,23 +19,16 @@ LIBATSCC_targetloc
 //
 #staload "./basics.sats"
 //
-#include "{$LIBATSCC}/SATS/list.sats"
+#include "{$LIBATSCC}/SATS/ML/option0.sats"
 //
 (* ****** ****** *)
 //
 fun{a:t0p}
-fprint_list
-  (LuaFile, List(INV(a))): void = "mac#%"
+fprint_option0
+  (LuaFile, option0(INV(a))): void = "mac#%"
 //
-fun{}
-fprint_list$sep(out: LuaFile): void = "mac#%"
-//
-fun{a:t0p}
-fprint_list_sep
-  (LuaFile, List(INV(a)), sep: string): void = "mac#%"
-//
-overload fprint with fprint_list of 100
+overload fprint with fprint_option0 of 100
 //
 (* ****** ****** *)
 
-(* end of [list.sats] *)
+(* end of [option0.sats] *)

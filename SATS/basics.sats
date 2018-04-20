@@ -8,38 +8,23 @@
 // HX-2014-08:
 // prefix for external names
 //
-#define
-ATS_PACKNAME
-"ATSCC2LUA.basics"
-#define
-ATS_EXTERN_PREFIX "ats2luapre_"
-//
+#define ATS_PACKNAME "ATSCC2LUA.basics"
+#define ATS_EXTERN_PREFIX "ats2luapre_"
+#define LIBATSCC_targetloc "$PATSHOME/contrib/libatscc/ATS2-0.3.2"
+#include "{$LIBATSCC}/basics.sats"
+
 (* ****** ****** *)
-//
-#define
-LIBATSCC_targetloc
-"$PATSHOME/contrib/libatscc"
-//
-(* ****** ****** *)
-(*
+
 typedef char = int
-*)
+
 (* ****** ****** *)
-//
-abstype LuaNumber
-abstype LuaTable
-abstype LuaString
-abstype LuaThread
-abstype LuaFunction
-abstype LuaBoolean
-abstype LuaUserdata
+
 abstype LuaFile
-//
+
 (* ****** ****** *)
-//
-abstype LuaTable(a:vt@ype) // [...]
-//
-(* ****** ****** *
+
+abstype LuaTable(k:vt@ype, v:vt@ype)
+
 //
 fun
 fun2cloref0
@@ -58,6 +43,5 @@ fun2cloref3
 {a1,a2,a3:t@ype}{res:t@ype}
   (fopr: (a1, a2, a3) -> res): cfun(a1, a2, a3, res) = "mac#%"
 //
-* ****** ****** *)
 
 (* end of [basics_lua.sats] *)

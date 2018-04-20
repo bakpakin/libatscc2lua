@@ -1,36 +1,40 @@
 #define ATS_DYNLOADFLAG 0
 #define ATS_EXTERN_PREFIX "ats2luapre_ML_"
 #define ATS_STATIC_PREFIX "_ats2luapre_ML_list0_"
-#define LIBATSCC_targetloc "$PATSHOME/contrib/libatscc"
-#staload UN = "prelude/SATS/unsafe.sats"
+#define LIBATSCC_targetloc "$PATSHOME/contrib/libatscc/ATS2-0.3.2"
 //
 (* ****** ****** *)
 //
-#staload "./../../basics.sats"
+#staload
+UN = "prelude/SATS/unsafe.sats"
 //
 (* ****** ****** *)
 //
-#staload "./../../SATS/integer.sats"
+#staload "./../SATS/basics.sats"
 //
 (* ****** ****** *)
 //
-#staload "./../../SATS/print.sats"
-#staload "./../../SATS/filebas.sats"
+#staload "./../SATS/integer.sats"
 //
 (* ****** ****** *)
 //
-#staload "./../../SATS/list.sats"
+#staload "./../SATS/print.sats"
+#staload "./../SATS/filebas.sats"
 //
 (* ****** ****** *)
 //
-#staload "./../../SATS/stream.sats"
-//
-#staload "./../../SATS/stream_vt.sats"
-#staload _ = "./../../DATS/stream_vt.dats"
+#staload "./../SATS/list.sats"
 //
 (* ****** ****** *)
 //
-#staload "./../../SATS/ML/list0.sats"
+#staload "./../SATS/stream.sats"
+//
+#staload "./../SATS/stream_vt.sats"
+#staload _ = "./stream_vt.dats"
+//
+(* ****** ****** *)
+//
+#staload "./../SATS/list0.sats"
 //
 (* ****** ****** *)
 //
@@ -40,7 +44,7 @@
 //
 local
 //
-#staload "./../list.dats"
+#staload "./list.dats"
 //
 in (* in-of-local *)
 //

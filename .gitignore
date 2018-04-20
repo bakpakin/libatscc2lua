@@ -9,3 +9,5 @@
 
 # Ignore rocks.
 *.rock
+
+BUILD/**/*.lua

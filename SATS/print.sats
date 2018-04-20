@@ -23,7 +23,7 @@ typedef
 fprint_type
 (
 a:t@ype
-) = (JSfilr, a) -<fun1> void
+) = (LuaFile, a) -<fun1> void
 *)
 //
 (* ****** ****** *)
@@ -40,13 +40,12 @@ fun print_bool : bool -> void = "mac#%"
 fun print_double : double -> void = "mac#%"
 
 (* ****** ****** *)
-//
-fun
-print_string : string -> void = "mac#%"
-//
+
+fun print_string : string -> void = "mac#%"
+
 (* ****** ****** *)
 
-fun print_obj{a:t0p}(obj: a): void = "mac#%"
+fun print_table{a:t0p}(LuaTable: a): void = "mac#%"
 
 (* ****** ****** *)
 

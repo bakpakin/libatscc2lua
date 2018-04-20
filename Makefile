@@ -1,22 +1,33 @@
 # Makefile to build libatscc2lua and output 
 # both a lua file and Luarocks package
 
+# Confiure tools used for make
+PATSOPT=$(PATSHOME)/bin/patsopt
+ATSCC2LUA?=../bin/atscc2lua
 RMF=rm -rf
 CAT=cat
 LUAROCKS=luarocks
+LUA=lua
 
-CATS=$(wildcard CATS/*.lua)
+# Match sources via globbing
+CATS=$(wildcard ./CATS/*.lua)
+DATS=$(wildcard ./DATS/*.dats)
+DATSLUA = $(patsubst %.dats,./BUILD/%_dats.lua,$(DATS))
 
 # Main target
-all: concat
+all: libatscc2lua.lua
+
+# Compile all dats files -> C -> Lua
+./BUILD/%_dats.lua: %.dats
+	$(PATSOPT) -d $< | $(ATSCC2LUA) -o $@ -i
 
 # Concatenated build
-concat: libatscc2lua.lua
-libatscc2lua.lua: $(CATS)
+libatscc2lua.lua: $(CATS) $(DATSLUA)
 	echo "-- Auto generated - Do not edit\n" > $@
 	$(CAT) $^ >> $@
 
 clean:
 	$(RMF) libatscc2lua.lua
+	$(RMF) $(DATSLUA)
 
-.PHONY: clean all concat
+.PHONY: clean all 

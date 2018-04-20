@@ -13,7 +13,7 @@
 (* ****** ****** *)
 //
 #define LIBATSCC_targetloc "$PATSHOME/contrib/libatscc"
-#staload "./../basics.sats"
+#staload "./basics.sats"
 #include "{$LIBATSCC}/SATS/reference.sats"
 
 (* end of [reference.sats] *)

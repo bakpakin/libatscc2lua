@@ -14,9 +14,9 @@
 //
 #define
 LIBATSCC_targetloc
-"$PATSHOME/contrib/libatscc"
+"$PATSHOME/contrib/libatscc/ATS2-0.3.2"
 //
-#staload "./../basics.sats"
+#staload "./basics.sats"
 //
 #include "{$LIBATSCC}/SATS/option.sats"
 //

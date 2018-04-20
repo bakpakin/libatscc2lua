@@ -2,4 +2,4 @@
 #define LIBATSCC_targetloc  "$PATSHOME/contrib/libatscc/ATS2-0.3.2"
 #staload "./basics.sats"
 
-#include "{$LIBATSCC}/SATS/funarray.sats"
+#include "{$LIBATSCC}/SATS/gmatrixref.sats"
