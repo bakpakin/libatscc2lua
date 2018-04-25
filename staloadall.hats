@@ -22,7 +22,7 @@
 #staload "./SATS/print.sats"
 //
 (* ****** ****** *)
-#staload "./SATS/gvalue.sats"
+// #staload "./SATS/gvalue.sats"
 //
 (* ****** ****** *)
 //

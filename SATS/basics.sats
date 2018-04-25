@@ -19,8 +19,8 @@ typedef char = int
 
 (* ****** ****** *)
 
-abstype LuaFile
-typedef FILEref_type = LuaFile
+typedef LuaFile = FILEref
+// JSfilr
 
 (* ****** ****** *)
 

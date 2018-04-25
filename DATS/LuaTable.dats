@@ -44,6 +44,7 @@ UN =
 
 (* ****** ****** *)
 
+(*
 implement
 LuaTable_make_list
   {a}(xs) = let
@@ -121,6 +122,7 @@ if i < asz
 in
   let val () = loop(0) in A end
 end (* end of [JSarray_tabulate_cloref] *)
+*)
 
 (* ****** ****** *)
 
