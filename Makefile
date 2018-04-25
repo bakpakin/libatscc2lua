@@ -2,22 +2,23 @@
 # both a lua file and Luarocks package
 
 # Confiure tools used for make
-PATSOPT=$(PATSHOME)/bin/patsopt
+PATSOPT?=$(PATSHOME)/bin/patsopt
 ATSCC2LUA?=../bin/atscc2lua
-RMF=rm -rf
-CAT=cat
-LUAROCKS=luarocks
-LUA=lua
+RMF?=rm -rf
+CAT?=cat
+#LUAROCKS=luarocks
+#LUA=lua
 
-# Match sources via globbing
-CATS=$(wildcard ./CATS/*.lua)
-DATS=$(wildcard ./DATS/*.dats)
+# Match sources via globbing, sort for determinism
+CATS=$(sort $(wildcard ./CATS/*.lua))
+DATS=$(sort $(wildcard ./DATS/*.dats))
 DATSLUA = $(patsubst %.dats,./BUILD/%_dats.lua,$(DATS))
 
 # Main target
 all: libatscc2lua.lua
 
-# Compile all dats files -> C -> Lua
+# Compile all dats files:
+# ATS --(patsopt)--> C --(atscc2lua)--> Lua
 ./BUILD/%_dats.lua: %.dats
 	$(PATSOPT) -d $< | $(ATSCC2LUA) -o $@ -i
 

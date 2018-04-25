@@ -8,7 +8,7 @@ datatype gvalue =
   | GVbool of (bool)
   | GVfloat of (double)
   | GVstring of (string)
-  | GVobject of (JSobj)
+  | GVobj of (LuaTable)
   | GVlist of gvlist
   | GVarray of gvarray
   | GVhashtbl of gvhashtbl

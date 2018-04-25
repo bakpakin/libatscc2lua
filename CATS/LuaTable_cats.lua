@@ -13,6 +13,7 @@ ats2luapre_LuaTable_concat2 = table.concat
 ats2luapre_LuaTable_concat1 = table.concat
 
 function ats2luapre_LuaTable_length(t) return #t end
+function ats2luapre_LuaTable_length0based(t) return #t + 1 end
 
 function ats2luapre_LuaTable_copy(t)
     local ret = {}

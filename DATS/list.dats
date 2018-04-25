@@ -38,8 +38,8 @@
 
 (* ****** ****** *)
 
-#define ATSCC_STREAM 1
-#define ATSCC_STREAM_VT 1
+//#define ATSCC_STREAM 1
+//#define ATSCC_STREAM_VT 1
 
 (* ****** ****** *)
 

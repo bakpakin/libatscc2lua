@@ -30,6 +30,10 @@ fun LuaTable_length
     {v:vt0p}
     (LuaTable(int, v)): int = "mac#%"
 
+fun LuaTable_length0based
+    {v:vt0p}
+    (LuaTable(int, v)): int = "mac#%"
+
 fun LuaTable_copy
     {k,v:vt0p}
     (LuaTable(k, v)): LuaTable(k, v) = "mac#%"

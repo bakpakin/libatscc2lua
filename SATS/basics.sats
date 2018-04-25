@@ -20,6 +20,7 @@ typedef char = int
 (* ****** ****** *)
 
 abstype LuaFile
+typedef FILEref_type = LuaFile
 
 (* ****** ****** *)
 
