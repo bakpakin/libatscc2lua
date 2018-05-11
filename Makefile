@@ -6,8 +6,8 @@ PATSOPT?=$(PATSHOME)/bin/patsopt
 ATSCC2LUA?=../bin/atscc2lua
 RMF?=rm -rf
 CAT?=cat
+LUA=lua
 #LUAROCKS=luarocks
-#LUA=lua
 
 # Match sources via globbing, sort for determinism
 CATS=$(sort $(wildcard ./CATS/*.lua))
@@ -27,8 +27,12 @@ libatscc2lua.lua: $(CATS) $(DATSLUA)
 	echo "-- Auto generated - Do not edit\n" > $@
 	$(CAT) $^ >> $@
 
+# Make sure the library at least is valid lua
+test_syntax: libatscc2lua.lua
+	lua $<
+
 clean:
 	$(RMF) libatscc2lua.lua
 	$(RMF) $(DATSLUA)
 
-.PHONY: clean all 
+.PHONY: clean all test_syntax
