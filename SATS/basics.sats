@@ -12,6 +12,7 @@
 #define ATS_EXTERN_PREFIX "ats2luapre_"
 #define LIBATSCC_targetloc "$PATSHOME/contrib/libatscc/ATS2-0.3.2"
 #include "{$LIBATSCC}/basics.sats"
+#define ATS_EXTERN_PREFIX "ats2luapre_"
 
 (* ****** ****** *)
 
@@ -25,6 +26,10 @@ typedef LuaFile = FILEref
 (* ****** ****** *)
 
 abstype LuaTable(k:vt@ype, v:vt@ype)
+
+//
+macdef
+assertloc(claim) = assert_errmsg(,(claim), $mylocation)
 
 //
 fun

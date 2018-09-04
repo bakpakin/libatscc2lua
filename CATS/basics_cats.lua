@@ -103,14 +103,14 @@ function ats2luapre_StreamSubscriptExn_throw()
   error("StreamSubscriptionExn")
 end
 
-function ats2luapre_assert_bool0(tfv) if not tfv then error("Assert") end end
-function ats2luapre_assert_bool1(tfv) if not tfv then error("Assert") end end
+function atspre_assert_bool0(tfv) if not tfv then error("Assert") end end
+function atspre_assert_bool1(tfv) if not tfv then error("Assert") end end
 
-function ats2luapre_assert_errmsg_bool0 (tfv, errmsg)
+function atspre_assert_errmsg_bool0 (tfv, errmsg)
     if not tfv then error(errmsg) end
 end
 
-function ats2luapre_assert_errmsg_bool1(tfv, errmsg)
+function atspre_assert_errmsg_bool1(tfv, errmsg)
     if not tfv then error(errmsg) return end
 end
 
