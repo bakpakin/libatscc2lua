@@ -53,8 +53,7 @@ ats2luapre_neg_int1 = neg
 
 -- ------ ------ --
 
-function
-ats2luapre_abs_int0(x) return abs(x) end
+ats2luapre_abs_int0 = abs
 
 -- ------ ------ --
 
